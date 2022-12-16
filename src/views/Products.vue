@@ -20,7 +20,7 @@ import { ref, computed, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
 import { nanoid } from 'nanoid'
 import { useProductStore } from '../store/product'
-import { products } from '../../bd.js'
+import { products } from '../../bd'
 
 const router = useRouter()
 
@@ -28,7 +28,7 @@ const { getProduct, storeProduct, storelastId } = useProductStore()
 
 const filteProducts = computed(() => {
   if(getProduct.product.length) {
-    return products.filter((product: any) => {
+    return products.filter((product) => {
       return product.product.toLowerCase().indexOf(getProduct.product.toLowerCase()) >= 0 || product.product.toLowerCase().indexOf(getProduct.product.toLowerCase()) >= 0
     })
   }

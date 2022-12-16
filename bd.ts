@@ -1,4 +1,4 @@
-const products = [
+const products: Array<any> = [
   {
     "id": 0,
     "product": "VITAPIRENA 5 GR/CJA X 50 SOB",
