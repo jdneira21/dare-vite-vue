@@ -28,7 +28,7 @@ const { getProduct, storeProduct, storelastId } = useProductStore()
 
 const filteProducts = computed(() => {
   if(getProduct.product.length) {
-    return products.filter(product => {
+    return products.filter((product: any) => {
       return product.product.toLowerCase().indexOf(getProduct.product.toLowerCase()) >= 0 || product.product.toLowerCase().indexOf(getProduct.product.toLowerCase()) >= 0
     })
   }
